@@ -3,7 +3,7 @@ if __name__ == '__main__':
     from ultralytics import YOLO
 
 
-    model = YOLO('yolov8n.yaml')
+    model = YOLO('yolov8n-obb.pt')
 
     results = model.train(
         data='data.yaml',   

@@ -2,7 +2,8 @@ import torch
 from ultralytics import YOLO
 import cv2
 
-model_path = 'runs/detect/train/weights/best.pt'
+#model_path = 'runs/detect/train/weights/best.pt'
+model_path = 'runs/obb/train6/weights/best.pt'
 model = YOLO(model_path)
 
 image_path = 'prueba.jpg'
@@ -20,7 +21,7 @@ results = model(image)
 annotated_image = results[0].plot()  
 
 
-output_path = 'prediccion.jpg'
+output_path = 'prediccion_obb.jpg'
 cv2.imwrite(output_path, annotated_image)
 print(f"Imagen guardada en: {output_path}")
 
